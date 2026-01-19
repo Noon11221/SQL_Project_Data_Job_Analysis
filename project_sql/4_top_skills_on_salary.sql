@@ -8,47 +8,6 @@ Answer: What are the top skills based on salary?
 
 
 
-SELECT *
-FROM job_postings_fact as main
-INNER JOIN skills_job_dim as main2
-ON main.job_id = main2.job_id
-INNER JOIN skills_dim as main3
-ON main2.skill_id = main3.skill_id
-GROUP BY salary_year_avg 
-LIMIT 5
-
-SELECT * FROM job_postings_fact
-LIMIT 100
-;
-
-SELECT
-    skills,
-    COUNT(skills_job_dim.job_id) as skill_count
-FROM skills_job_dim 
-INNER JOIN skills_dim
-ON skills_job_dim.skill_id = skills_dim.skill_id
-GROUP BY skills 
-ORDER BY skill_count DESC
-;
-
-
-SELECT
-    skills,
-    ROUND(AVG(salary_year_avg), 0) as avg_salary
-FROM job_postings_fact
-INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
-INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
-WHERE
-    job_title_short = 'Data Analyst' AND
-    salary_year_avg IS NOT NULL
-    --job_work_from_home = True
-GROUP BY
-    skills
-ORDER BY
-    2 DESC
-LIMIT 25;
-
-
 SELECT
     skills,
     ROUND(AVG(salary_year_avg), 0) as avg_salary

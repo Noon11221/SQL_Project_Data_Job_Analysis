@@ -74,3 +74,14 @@ ORDER BY
     demand_count DESC
 LIMIT 25;
 
+/*
+Highest-paying Data Analyst roles favor big data and distributed systems, with PySpark and Databricks leading salary rankings, reflecting the value of working with large-scale data environments.
+
+Top salaries increasingly require skills beyond traditional analytics, including data engineering and MLOps tools such as Airflow, Kubernetes, Jenkins, and Linux.
+
+Machine learning–related skills correlate with higher compensation, indicating that analysts who can support or apply ML workflows earn more.
+
+Version control and collaboration tools (GitLab, Bitbucket) appear frequently, signaling that higher pay is associated with seniority and production-level responsibility.
+
+Salary is driven by skill depth rather than popularity, as many high-paying skills are specialized and less common.
+*/ 
